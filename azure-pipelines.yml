@@ -28,5 +28,6 @@ steps:
       curl \
                   -X PUT \
                   -H "Accept: application/vnd.github.v3+json" \
-                  https://api.github.com/orgs/PermissionsSpike/teams/developersSpike/repos/ilijabrdar/PermissionSpikeRepo \
+                  -H "Authorization: token 003bb8b747031bbf61ca8c06ce66c32fbff9728b" \
+                  https://api.github.com/organizations/73760643/team/4229200/repos/PermissionsSpike/PermissionSpikeRepo \
                   -d '{"permission":"pull"}'
