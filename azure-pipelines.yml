@@ -29,5 +29,5 @@ steps:
                   -X PUT \
                   -H "Accept: application/vnd.github.v3+json" \
                   -H "Authorization: token $(token)"
-                  https://api.github.com/orgs/PermissionsSpike/teams/developersSpike/repos/PermissionsSpike/PermissionSpikeRepo \
-                  -d '{"permission":"pull"}'
+                  https://api.github.com/orgs/permissionsspike/teams/developersspike/repos/permissionsspike/permissionspikerepo \
+                  -D '{"permission":"pull"}'
