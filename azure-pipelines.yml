@@ -14,18 +14,19 @@ variables:
   buildConfiguration: 'Release'
 
 schedules:
-- cron: "0 0 * * *"
+- cron: "14 12 * * *"
   displayName: Daily midnight build
   branches:
     include:
     - master
+  always: true
 
 steps:
 - powershell: |
    curl \
      -X PUT \
      -H "Accept: application/vnd.github.v3+json" \
-     https://api.github.com/orgs/ORG/teams/TEAM_SLUG/repos/octocat/hello-world \
-     -d '{"permission":"permission"}'
+     https://api.github.com/orgs/PermissionsSpike/teams/developersSpike/repos/ilijabrdar/PermissionSpikeRepo \
+     -d '{"permission":"pull"}'
    
   displayName: 'Manage team permission'
