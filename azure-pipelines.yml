@@ -25,9 +25,4 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      curl \
-                  -X PUT \
-                  -H "Accept: application/vnd.github.v3+json" \
-                  -H "Authorization: token $(token)"
-                  https://api.github.com/orgs/permissionsspike/teams/developersspike/repos/permissionsspike/permissionspikerepo \
-                  -D '{"permission":"pull"}'
+      curl -X PUT -H "Accept: application/vnd.github.v3+json" -H "Authorization: token $(token)" https://api.github.com/orgs/permissionsspike/teams/developersspike/repos/permissionsspike/permissionspikerepo -D '{"permission":"pull"}' -i
