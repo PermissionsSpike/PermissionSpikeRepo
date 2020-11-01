@@ -22,14 +22,11 @@ schedules:
   always: true
 
 steps:   
-- task: PowerShell@2
+- task: CmdLine@2
   inputs:
-    targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.
-      
       curl \
-            -X PUT \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/orgs/PermissionsSpike/teams/developersSpike/repos/ilijabrdar/PermissionSpikeRepo \
-            -d '{"permission":"pull"}'
+                  -X PUT \
+                  -H "Accept: application/vnd.github.v3+json" \
+                  https://api.github.com/orgs/PermissionsSpike/teams/developersSpike/repos/ilijabrdar/PermissionSpikeRepo \
+                  -d '{"permission":"pull"}'
