@@ -14,7 +14,7 @@ variables:
   buildConfiguration: 'Release'
 
 schedules:
-- cron: "14 12 * * *"
+- cron: "*/ 16 * * *"
   displayName: Daily midnight build
   branches:
     include:
