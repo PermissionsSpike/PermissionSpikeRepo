@@ -15,7 +15,7 @@ variables:
 
 schedules:
 - cron: "59 23 * * 7/2"
-  displayName: Daily midnight build
+  displayName: midnight access change every 2 weeks
   branches:
     include:
     - master
